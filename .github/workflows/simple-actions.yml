@@ -1,0 +1,19 @@
+name: Simple-Actions
+
+on: push
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout Repo
+          uses: actions/checkout@v4
+
+        - name: List and Read files
+          run: |
+            echo "First Github Avtions Job"
+            ls -lrt
+            cat README.md
+
+        - name: Generate cowsay
+          run: cowsay -f dragon "Dragon... Artwork" >> dragon.txt
