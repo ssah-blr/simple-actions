@@ -20,3 +20,8 @@ jobs:
 
         - name: Generate cowsay
           run: cowsay -f dragon "Dragon... Artwork" >> dragon.txt
+
+        - name: Test and Read
+          run: |
+            grep -i "dragon" dragon.txt
+            cat dragon.txt
