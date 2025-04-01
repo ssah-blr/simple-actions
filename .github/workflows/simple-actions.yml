@@ -9,6 +9,9 @@ jobs:
         - name: Checkout Repo
           uses: actions/checkout@v4
 
+        - name: Install Cowsay Program
+          run: sudo apt-get install cowsay -y
+
         - name: List and Read files
           run: |
             echo "First Github Avtions Job"
